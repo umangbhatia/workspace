@@ -1,0 +1,13 @@
+package BinaryTrees;
+
+public class SumOfPairOfNodesIsKBST {
+	public static void pairs(BinaryTree<Integer> root, int k){
+		if(k==0)
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,23 @@
+package Graph;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class Vertex {
+	String name;
+	ArrayList<Vertex> vertices;
+	public Vertex(String name) {
+		// TODO Auto-generated constructor stub
+		this.name = name;
+		vertices = new ArrayList<>();
+	}
+	public boolean areAdjacent(String name){
+		for(Vertex v: vertices){
+			if(v.name.equals(name)){
+				return true;
+			}
+		}
+		return false;
+	}
+
+}

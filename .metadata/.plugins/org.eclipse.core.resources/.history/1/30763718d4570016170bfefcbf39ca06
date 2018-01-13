@@ -1,0 +1,81 @@
+package BinaryTrees;
+
+import queues.QueuesUsingLL;
+
+public class checkifcousins {
+	public class CheckIFCousins {
+		public static ReturnTypeCousins check(BinaryTree<Integer> root, int first, int second, int count){
+//			if(root.left!=null){
+//				if(root.left.data==first&&root.left.data==second){
+//					ReturnTypeCousins ans = new ReturnTypeCousins();
+//					ans.check=false;
+//					ans.count = count;
+//					return ans;
+//				}
+//				if(root.left.data==first||root.left.data==second){
+//					count++;
+//					ReturnTypeCousins ans = new ReturnTypeCousins();
+//					ans.count=count;
+//					ans.check=true;
+//					return ans;
+//				}
+//				return check(root.left, first, second, count++);
+//			}
+//			if(root.right!=null){
+//				if(root.right.data==first&&root.right.data==second){
+//					ReturnTypeCousins ans = new ReturnTypeCousins();
+//					ans.check=false;
+//					ans.count = count;
+//					return ans;
+//				}
+//				if(root.right.data==first||root.right.data==second){
+//					count++;
+//					ReturnTypeCousins ans = new ReturnTypeCousins();
+//					ans.count=count;
+//					ans.check=true;
+//					return ans;
+//				}
+//				return check(root.right, first, second, count++);
+//			}
+			if(root.left!=null){
+				if(root.left.data==first){
+					if(root.right!=null){
+						if(root.right.data!=second){
+							ReturnTypeCousins ans = new ReturnTypeCousins();
+							ans.count = count++;
+							ans.check = true;
+						}
+					}else{
+						ReturnTypeCousins ans = new ReturnTypeCousins();
+						ans.count = count++;
+						ans.check = true;
+					}
+				}
+			}if(root.right!=null){
+				if(root.right.data==first){
+					if(root.left!=null){
+						if(root.left.data!=second){
+							ReturnTypeCousins ans = new ReturnTypeCousins();
+							ans.count = count++;
+							ans.check = true;
+						}
+					}else{
+						ReturnTypeCousins ans = new ReturnTypeCousins();
+						ans.count = count++;
+						ans.check = true;
+					}
+				}
+			}
+			if(root.left!=null){
+			ReturnTypeCousins ans1 = check(root.left, first, second, count);
+			ReturnTypeCousins ans2 = check(root.left, second, first, count);
+			}
+		}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+}

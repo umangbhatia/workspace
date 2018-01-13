@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Q5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Enter N");
+		Scanner s = new Scanner(System.in);
+		int n = s.nextInt();
+		int i = 1, r=0;
+		int sumEven=0, sumOdd=0;
+		while(i>=1){
+			i=n/10;
+			r=n%10;
+			if(r%2==0){
+				sumEven = sumEven +r;
+			}
+			if(r%0==1){
+				sumOdd = sumOdd + r;
+			}
+			
+		}
+		
+		
+
+	}
+
+}

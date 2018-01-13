@@ -1,0 +1,20 @@
+package Graphs;
+
+public class graphUse {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Graph g = new Graph();
+		g.addVertex("A");
+		g.addVertex("B");
+		g.addVertex("C");
+		g.addVertex("D");
+		g.addEdge("A", "B");
+		g.addEdge("A", "C");
+		g.addEdge("B", "D");
+//		System.out.println(g.havePath("B", "C"));
+		System.out.println(g.numEdges());
+
+	}
+
+}
